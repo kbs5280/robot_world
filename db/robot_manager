@@ -1,11 +1,27 @@
 ---
 :robots:
-- :id: 1
-  :name: Wiggi
-  :city: Cincinatti
-  :state: OH
-  :avatar: ";lkaj;lkj;lkj"
-  :birthdate: 12/8/99
-  :date_hired: 12/9/99
-  :department: Logistics
-:total: 1
+- :id: 11
+  :name: Taylor S.
+  :city: Kansas City
+  :state: Missouri
+  :avatar: dontdoit
+  :birthdate: 12/8/2015
+  :date_hired: 12/9/2015
+  :department: Sanitation & Warfare
+- :id: 12
+  :name: Phil
+  :city: Sin City
+  :state: NV
+  :avatar: tryagain
+  :birthdate: 12/8/1970
+  :date_hired: 12/9/1970
+  :department: Ballin' and Shot Callin'
+- :id: 13
+  :name: Pizza
+  :city: NY
+  :state: NY
+  :avatar: luigi
+  :birthdate: 12/8/1690
+  :date_hired: 12/9/1690
+  :department: Pizza & Catapult Strategies
+:total: 13

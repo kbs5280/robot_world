@@ -5,7 +5,7 @@ class RobotManager
   attr_reader :database
 
   def initialize(database)
-    @database = database
+    @database  = database
   end
 
   def create(robot)
@@ -32,5 +32,39 @@ class RobotManager
 
   def all
     raw_robots.map { |robot| Robot.new(robot) }
+  end
+
+  def raw_robot(id)
+    raw_robots.find { |robot| robot[:id] == id }
+  end
+
+  def find(id)
+    Robot.new(raw_robot(id))
+  end
+
+  def update(id, robot)
+   database.transaction do
+     target = database[:robots].find { |data| data[:id] == id }
+     target[:name]        = robot[:name]
+     target[:city]        = robot[:city]
+     target[:state]       = robot[:state]
+     target[:avatar]      = robot[:avatar]
+     target[:birthdate]   = robot[:birthdate]
+     target[:date_hired]  = robot[:date_hired]
+     target[:department]  = robot[:department]
+   end
+  end
+
+  def destroy(id)
+    database.transaction do
+      database[:robots].delete_if { |robot| robot[:id] == id }
+    end
+  end
+
+  def delete_all
+    database.transaction do
+      database['robots']  = []
+      database['total']   = 0
+    end
   end
 end
