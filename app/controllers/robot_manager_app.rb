@@ -1,4 +1,4 @@
-require 'models/robot_manager'
+# require '/models/robot_manager'
 
 class RobotManagerApp < Sinatra::Base
   set :root, File.expand_path("..", __dir__)
@@ -43,7 +43,12 @@ class RobotManagerApp < Sinatra::Base
   end
 
   def robot_manager
-    database = YAML::Store.new('db/robot_manager')
+    if ENV['RACK_ENV'] == "test"
+      database = SQLite3::Database.new("db/robot_manager_test.db")
+    else
+      database = SQLite3::Database.new("db/robot_manager_development.db")
+    end
+    database.results_as_hash = true
     @robot_manager ||= RobotManager.new(database)
   end
 end

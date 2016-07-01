@@ -1,9 +1,13 @@
-<a href="/robots">Back to Robots!</a>
+<a class="col-md-12 nav navbar-default navbar-static-top navbar-brand navbar-center text-center" href="/robots">Back to Robots!</a>
 
-<h3><%= @robot.name %></h3>
-<p><%= @robot.city %></p>
-<p><%= @robot.state %></p>
-<p><%= @robot.avatar %></p>
-<p><%= @robot.birthdate %></p>
-<p><%= @robot.date_hired %></p>
-<p><%= @robot.department %></p>
+<div class="text-center">
+
+  <p><img src="https://robohash.org/<%= @robot.avatar %>.png"></p>
+  <h3><%= @robot.name %></h3>
+  <p><%= @robot.city %></p>
+  <p><%= @robot.state %></p>
+  <p><%= @robot.birthdate %></p>
+  <p><%= @robot.date_hired %></p>
+  <p><%= @robot.department %></p>
+
+</div>
