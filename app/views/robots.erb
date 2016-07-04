@@ -1,6 +1,6 @@
 <h3 class="col-md-12 nav navbar-default navbar-static-top navbar-brand navbar-center text-center">Welcome to Robot Inventory</h3>
 
-  <div class="text-center">
+  <div id="robot_inventory" class="text-center">
 
   <% @robots.each do |robot| %>
       <h4><%= robot["id"] %> * <a href="/robots/<%= robot["id"] %>"><%= robot["name"] %></a></h3>

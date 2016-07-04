@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ROBOT WOOOOOOOORRRRRRRRRLLLLLLD!!!</title>
+    <!-- <link rel="stylesheet" href="/application.css"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container">
+      <h3 class="col-md-12 nav navbar-default navbar-static-top navbar-brand navbar-center text-center">Welcome to Robot Inventory</h3>
+
+  <div id="robot_inventory" class="text-center">
+
+  
+      <h4>5 * <a href="/robots/5">Jorge</a></h3>
+      <a class="btn btn-info" href="/robots/5/edit">Edit</a>
+      <br>
+        <form action="/robots/5" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <input class="btn btn-danger" type="submit" value="DELETE"/>
+        </form>
+  
+      <h4>6 * <a href="/robots/6">Juan</a></h3>
+      <a class="btn btn-info" href="/robots/6/edit">Edit</a>
+      <br>
+        <form action="/robots/6" method="POST">
+          <input type="hidden" name="_method" value="DELETE">
+          <input class="btn btn-danger" type="submit" value="DELETE"/>
+        </form>
+  
+
+  </div>
+
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  </body>
+</html>
